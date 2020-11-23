@@ -15,21 +15,21 @@ object Form3: TForm3
   TextHeight = 13
   object Label1: TLabel
     Left = 16
-    Top = 24
+    Top = 48
     Width = 27
     Height = 13
     Caption = 'Table'
   end
   object Label2: TLabel
     Left = 16
-    Top = 96
+    Top = 112
     Width = 15
     Height = 13
     Caption = 'Col'
   end
   object Label3: TLabel
     Left = 16
-    Top = 168
+    Top = 176
     Width = 27
     Height = 13
     Caption = 'Value'
@@ -54,7 +54,7 @@ object Form3: TForm3
   end
   object Edit1: TEdit
     Left = 16
-    Top = 48
+    Top = 72
     Width = 121
     Height = 21
     TabOrder = 2
@@ -62,7 +62,7 @@ object Form3: TForm3
   end
   object Edit2: TEdit
     Left = 16
-    Top = 120
+    Top = 136
     Width = 121
     Height = 21
     TabOrder = 3
@@ -70,7 +70,7 @@ object Form3: TForm3
   end
   object Edit3: TEdit
     Left = 16
-    Top = 192
+    Top = 200
     Width = 121
     Height = 21
     TabOrder = 4
@@ -88,6 +88,15 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
+  end
+  object Custom: TCheckBox
+    Left = 16
+    Top = 16
+    Width = 97
+    Height = 17
+    Caption = 'Custom'
+    TabOrder = 6
+    OnClick = CustomClick
   end
   object ADOConnection1: TADOConnection
     ConnectionString = 

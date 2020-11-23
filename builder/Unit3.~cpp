@@ -25,16 +25,44 @@ Form3->Hide();
 
 void __fastcall TForm3::Button2Click(TObject *Sender)
 {
-ADOQuery1->SQL->Clear();
-if(Edit2->Text == "UserID")
-{
-ADOQuery1->SQL->Add("select * from " + Edit1->Text + " where " + Edit2->Text + "=" + Edit3->Text);
-}else{
-ADOQuery1->SQL->Add("select * from " + Edit1->Text + " where " + Edit2->Text + "='" + Edit3->Text + "'");
+try{
+        ADOQuery1->SQL->Clear();
+        if (Custom->Checked == True){
+                ADOQuery1->SQL->Add(Edit2->Text);
+        }else{
+                if (Edit2->Text == "UserID"){
+                        ADOQuery1->SQL->Add("select * from " + Edit1->Text + " where " + Edit2->Text + "=" + Edit3->Text);
+                }else{
+                        ADOQuery1->SQL->Add("select * from " + Edit1->Text + " where " + Edit2->Text + "='" + Edit3->Text + "'");
+                }
+        }
+        ADOQuery1->Active=false;
+        ADOQuery1->Active=true;
+}catch(...){
+ShowMessage("не убей, не укради, не ломай");
 }
-ADOQuery1->Active=false;
-ADOQuery1->Active=true;
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm3::CustomClick(TObject *Sender)
+{
+if (Custom->Checked == True){
+Edit1->Visible = false;
+Edit3->Visible = false;
+Label1->Visible = false;
+Label3->Visible = false;
+
+Label2->Caption = "Query";
+Edit2->Text = "select * from Requests";
+}else{
+Edit1->Visible = true;
+Edit3->Visible = true;
+Label1->Visible = true;
+Label3->Visible = true;
+
+Label2->Caption = "Col";
+Edit2->Text = "Message";
+}
+}
+//---------------------------------------------------------------------------
 
