@@ -31,6 +31,9 @@ __published:	// IDE-managed Components
         TDBNavigator *DBNavigator2;
         TDataSource *TUsername;
         TADOTable *DName;
+        TLabel *Label1;
+        TLabel *Label2;
+        TLabel *Label3;
         void __fastcall Button1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

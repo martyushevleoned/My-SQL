@@ -1,8 +1,8 @@
 object Form2: TForm2
-  Left = 767
-  Top = 122
+  Left = 769
+  Top = 123
   Width = 289
-  Height = 600
+  Height = 648
   Caption = 'Form2'
   Color = clGradientActiveCaption
   Font.Charset = DEFAULT_CHARSET
@@ -13,9 +13,30 @@ object Form2: TForm2
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 120
+    Top = 16
+    Width = 16
+    Height = 13
+    Caption = 'Bot'
+  end
+  object Label2: TLabel
+    Left = 104
+    Top = 192
+    Width = 45
+    Height = 13
+    Caption = 'Requests'
+  end
+  object Label3: TLabel
+    Left = 104
+    Top = 368
+    Width = 48
+    Height = 13
+    Caption = 'Username'
+  end
   object Button1: TButton
     Left = 16
-    Top = 496
+    Top = 544
     Width = 241
     Height = 49
     Caption = 'Close'
@@ -24,7 +45,7 @@ object Form2: TForm2
   end
   object BotGrid: TDBGrid
     Left = 16
-    Top = 16
+    Top = 32
     Width = 241
     Height = 120
     DataSource = TBot
@@ -50,7 +71,7 @@ object Form2: TForm2
   end
   object RequestGrid: TDBGrid
     Left = 16
-    Top = 176
+    Top = 208
     Width = 241
     Height = 120
     DataSource = TRequests
@@ -76,7 +97,7 @@ object Form2: TForm2
   end
   object DBNavigator1: TDBNavigator
     Left = 16
-    Top = 136
+    Top = 152
     Width = 240
     Height = 25
     DataSource = TBot
@@ -84,7 +105,7 @@ object Form2: TForm2
   end
   object DBNavigator3: TDBNavigator
     Left = 16
-    Top = 456
+    Top = 504
     Width = 240
     Height = 25
     DataSource = TUsername
@@ -92,7 +113,7 @@ object Form2: TForm2
   end
   object UsernameGrid: TDBGrid
     Left = 16
-    Top = 336
+    Top = 384
     Width = 241
     Height = 120
     DataSource = TUsername
@@ -118,7 +139,7 @@ object Form2: TForm2
   end
   object DBNavigator2: TDBNavigator
     Left = 16
-    Top = 296
+    Top = 328
     Width = 240
     Height = 25
     DataSource = TRequests
@@ -140,7 +161,7 @@ object Form2: TForm2
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 240
-    Top = 496
+    Top = 544
   end
   object DBot: TADOTable
     Active = True
@@ -148,7 +169,7 @@ object Form2: TForm2
     CursorType = ctStatic
     TableName = 'Bot'
     Left = 240
-    Top = 48
+    Top = 64
   end
   object DRequests: TADOTable
     Active = True
@@ -156,22 +177,22 @@ object Form2: TForm2
     CursorType = ctStatic
     TableName = 'Requests'
     Left = 240
-    Top = 208
+    Top = 240
   end
   object TBot: TDataSource
     DataSet = DBot
     Left = 240
-    Top = 16
+    Top = 32
   end
   object TRequests: TDataSource
     DataSet = DRequests
     Left = 240
-    Top = 176
+    Top = 208
   end
   object TUsername: TDataSource
     DataSet = DName
     Left = 240
-    Top = 336
+    Top = 384
   end
   object DName: TADOTable
     Active = True
@@ -179,6 +200,6 @@ object Form2: TForm2
     CursorType = ctStatic
     TableName = 'Username'
     Left = 240
-    Top = 368
+    Top = 416
   end
 end
